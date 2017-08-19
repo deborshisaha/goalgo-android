@@ -1,4 +1,4 @@
-package design.semicolon.client.android.goalgo;
+package design.semicolon.client.android.goalgo.arrays;
 
 import com.algorithms.arrays.ChunkMerge;
 
