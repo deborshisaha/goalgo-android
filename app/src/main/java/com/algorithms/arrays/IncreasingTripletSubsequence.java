@@ -5,4 +5,10 @@ package com.algorithms.arrays;
  */
 
 public class IncreasingTripletSubsequence {
+
+    public boolean increasingTriplet (int[] a) {
+
+
+        return false;
+    }
 }
