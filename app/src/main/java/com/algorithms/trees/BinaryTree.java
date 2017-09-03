@@ -16,7 +16,7 @@ public class BinaryTree {
         this.root = root;
     }
 
-    BinaryTree() {
+    public BinaryTree() {
     }
 
     public void insert(Integer data) {
@@ -68,10 +68,10 @@ public class BinaryTree {
 
     public static BinaryTree createBalancedBT() {
         BinaryTree bt = new BinaryTree();
-        bt.insert(10);
+        bt.insert(12);
 
         TreeNode node = bt.getRootNode();
-        node.setLeft(new TreeNode(12));
+        node.setLeft(new TreeNode(10));
         node.setRight(new TreeNode(13));
 
         node.getRight().setRight(new TreeNode(14));
