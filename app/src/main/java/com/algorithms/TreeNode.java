@@ -5,6 +5,7 @@ public class TreeNode<T> {
     public T data;
     private TreeNode left;
     private TreeNode right;
+    private TreeNode auxPtr;
     private Integer rank;
     private Integer id;
     
@@ -65,5 +66,13 @@ public class TreeNode<T> {
 
     public Integer getId() {
         return this.id;
+    }
+
+    public TreeNode getAuxPtr() {
+        return auxPtr;
+    }
+
+    public void setAuxPtr(TreeNode auxPtr) {
+        this.auxPtr = auxPtr;
     }
 }

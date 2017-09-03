@@ -16,7 +16,7 @@ public class MaxProductOfSubArrayTest {
     public void basic_test () throws Exception {
         MaxProductSubArray obj = new MaxProductSubArray();
         int[] input = new int[]{-6, -3, 8, -9, -1, -1, 3, 6, 9, 0, 3, -1};
-        int ans = obj.maxProduct(input);
+        int ans = obj.maxProduct2(input);
         System.out.print(ans);
         assertTrue(ans == 34992);
     }

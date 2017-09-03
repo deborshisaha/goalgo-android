@@ -12,21 +12,24 @@ public class MaxProductSubArray {
 
         int min = 1;
         int max = 1;
-        int maxSoFar = 1;
+        int maxSoFar = input[0];
 
         for (int i = 0; i < input.length; i++) {
 
             if (input[i] > 0) {
                 // This will always contribute towards increasing the magnitude
                 max = max * input[i];
-                maxSoFar = Math.max(maxSoFar, max);
+
                 min = Math.min( min * input[i],1);
+
+                maxSoFar = Math.max(maxSoFar, max);
+
 
             } else if (input[i] < 0) {
                 // This will mostly contribut towards increasing the magnitude in the negative values
                 int temp = max * input[i]; // This will make the min either extremely negative or if it was negative it may push the value to the positive side with greater magnitude than max
 
-                maxSoFar = Math.max(max, min * input[i]);
+                maxSoFar = Math.max(maxSoFar, min * input[i]);
 
                 max = Math.max(1, min*input[i]);
 

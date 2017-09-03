@@ -6,6 +6,10 @@ import java.util.Queue;
 
 public class BinaryTree {
 
+    public void setRoot(TreeNode root) {
+        this.root = root;
+    }
+
     private TreeNode root;
 
     BinaryTree(TreeNode root) {
@@ -186,7 +190,7 @@ public class BinaryTree {
         return maxHeight + 1;
     }
 
-    TreeNode getRootNode() {
+    public TreeNode getRootNode() {
         return this.root;
     }
 
