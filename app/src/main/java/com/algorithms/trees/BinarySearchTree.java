@@ -9,34 +9,30 @@ public class BinarySearchTree extends BinaryTree {
     @Override
     public void insert(Integer data) {
 
+        // If the root is null
         if (this.root == null) {
             this.root = new TreeNode(data);
+            return;
         }
 
-        TreeNode<Integer> node = null;
-
-        if (data <= this.root.data) {
-            node = this.root.getLeft();
-        } else {
-            node = this.root.getRight();
-        }
+        TreeNode<Integer> node = this.root;
+        TreeNode<Integer> prev = null;
 
         while (node != null) {
-            TreeNode nextNode = null;
+            prev = node;
             if (node.data > data) {
-                nextNode = node.getLeft();
-                if (nextNode == null) {
-                    node.setLeft(new TreeNode(data));
-                }
                 node = node.getLeft();
             } else {
-                nextNode = node.getRight();
-                if (nextNode == null) {
-                    node.setRight(new TreeNode(data));
-                }
                 node = node.getRight();
             }
         }
+
+        if (prev.data > data) {
+            prev.setLeft(new TreeNode(data));
+        } else {
+            prev.setRight(new TreeNode(data));
+        }
+
     }
 
     // Constructors
